@@ -35,7 +35,7 @@ else:
 
 # loop through images in pokedex (or grab dir)
 jpeg_files = glob.glob(grab_dir + '/*.jpg')
-for jpeg in jpeg_files:
+for jpeg in jpeg_files: # could also use for filename in os.listdir(grab_dir)
     # convert and save to new directory
     filename = jpeg.split('/')[1].split('.')[0]
     png_img = Image.open(jpeg).save(save_dir + '/' + filename + '.png', 'png')
