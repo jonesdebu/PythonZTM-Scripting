@@ -23,7 +23,7 @@ try:
 except IndexError as e:
     print("You must enter the name of the jpeg dir with the photos you wish to convert and the name if the dir you wish"
           " to save the converted photos to as cmd line arguments.\n"
-          "For Example: python jpeg_to_png_converter.py grsab_dir save_dir\n")
+          "For Example: python jpeg_to_png_converter.py grab_dir save_dir\n")
     exit()
 
 
@@ -33,7 +33,7 @@ if os.path.isdir(save_dir):
 else:
     os.mkdir(save_dir)
 
-# loop through images in pokedexls
+# loop through images in pokedex (or grab dir)
 jpeg_files = glob.glob(grab_dir + '/*.jpg')
 for jpeg in jpeg_files:
     # convert and save to new directory
